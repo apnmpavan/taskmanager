@@ -24,7 +24,7 @@ import {
    ══════════════════════════════════════════════════════════════ */
 const SUPABASE_URL      = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
-const IS_DEMO           = !SUPABASE_URL || SUPABASE_URL.includes("YOUR_PROJECT");
+const IS_DEMO = SUPABASE_URL && SUPABASE_URL.includes("YOUR_PROJECT");
 
 /* ── camelCase ↔ snake_case ── */
 const toSnake  = s => s.replace(/[A-Z]/g, m => `_${m.toLowerCase()}`);
